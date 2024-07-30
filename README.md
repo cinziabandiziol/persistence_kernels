@@ -17,3 +17,11 @@ Code runs with python 3.11.x. The libraries needed are:
 and for computed PFK matrices Matlab R2023b.
 
 ## **How to run**
+
+In DATASET, the user can find the precomputed Persistence Diagrams with a file with corresponding labels. With the aim to reduce costs in terms of time, we preferred precomputed also a pregram matrix for each kernel. We describe here how to proceed.
+
+1. Compute the preGram matrices for kernels
+     - PSSK: the user runs
+       $ python ComputeMatrix_PSSK.py
+       and then write to the shell the name of the dataset of interest
+     - PWGK:  
