@@ -26,12 +26,12 @@ class Dataset:
             self.name = str('SHREC14')
             self.labels = self.y.tolist()
 
-        elif self.label == 'DIN_SYS':
+        elif self.label == 'DYN_SYS':
             self.d = 1
             self.type = 'balanced'
-            self.X = np.load('./DATASET/DIN_SYS/PD_DIN_SYS.npy', allow_pickle = True)
-            self.y = np.load('./DATASET/DIN_SYS/y_DIN_SYS.npy', allow_pickle = True)
-            self.name = str('Dinamical System')
+            self.X = np.load('./DATASET/DYN_SYS/PD_DYN_SYS.npy', allow_pickle = True)
+            self.y = np.load('./DATASET/DYN_SYS/y_DYN_SYS.npy', allow_pickle = True)
+            self.name = str('Dynamical System')
             self.labels = self.y.tolist()
 
         elif self.label == 'MNIST':
