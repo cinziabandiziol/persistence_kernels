@@ -23,6 +23,6 @@ In DATASET, the user can find the precomputed Persistence Diagrams with a file w
 
 1. Compute the preGram matrices for kernels
      - PSSK: the user runs
-       $ python ComputeMatrix_PSSK.py
+       * python ComputeMatrix_PSSK.py *
        and then write to the shell the name of the dataset of interest
      - PWGK:  
