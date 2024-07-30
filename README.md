@@ -13,6 +13,7 @@ Code runs with python 3.11.x. The libraries needed are:
 - scipy 1.7.2
 - scikit-learn 1.0.1
 - numba 0.58.1
+- persim 0.3.5
 
 and for computed PFK matrices Matlab R2023b.
 
