@@ -9,10 +9,10 @@ Software requirements
 
 Code runs with python 3.11.x. The libraries needed are:
 
-  numpy 1.21.4
-  gudhi 3.5
-  pandas 1.3.4
-  scipy 1.7.2
-  scikit-learn 1.0.1
-  potpourri3d 0.0.6
-  matplotlib 3.5.0
+- numpy 1.21.4
+- gudhi 3.5
+- pandas 1.3.4
+- scipy 1.7.2
+- scikit-learn 1.0.1
+- potpourri3d 0.0.6
+- matplotlib 3.5.0
