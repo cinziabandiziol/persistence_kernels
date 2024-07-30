@@ -1,2 +1,2 @@
-# persistence_kernels
-# Code repository of the preprint:
+Code repository of the preprint:
+# Persistence kernels for classification \\ A comparative study
