@@ -27,5 +27,7 @@ In DATASET, the user can find the precomputed Persistence Diagrams with a file w
      - PI: the user first create a folder with the name of dataset in PERSISTENCE_IMAGES, and then runs _python ComputePI.py_ and then write to the shell the name of the dataset of interest
   
 2. Chose 1 kernel, for example kernel = SWK, and run
+   
    $ python ClassificationTask_SWK.py
-   and then insert the name of the dataset of interest.
+   
+   and then insert the name of the dataset of interest. After the job ends, a file will be created in folder REPORT summarizing the information about dataset and the results of classification.
