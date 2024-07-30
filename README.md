@@ -14,3 +14,6 @@ Code runs with python 3.11.x. The libraries needed are:
 - scikit-learn 1.0.1
 - numba 0.58.1
 
+and for computed PFK matrices Matlab R2023b.
+
+## **How to run**
