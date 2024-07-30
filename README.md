@@ -15,7 +15,7 @@ Code runs with python 3.11.x. The libraries needed are:
 - numba 0.58.1
 - persim 0.3.5
 
-and for computed PFK matrices Matlab R2023b.
+and for PFK matrices Matlab R2023b.
 
 ## **How to run**
 
@@ -24,6 +24,7 @@ In DATASET, the user can find the precomputed Persistence Diagrams with a file w
 1. Compute the preGram matrices for kernels
      - PSSK: the user first create a folder with the name of dataset in PSSK_MATRICES, and then runs _python ComputeMatrix_PSSK.py_ and then write to the shell the name of the dataset of interest
      - PWGK: the user first create a folder with the name of dataset in PWGK_MATRICES, and then runs _python ComputeMatrix_PWGK.py_ and then write to the shell the name of the dataset of interest
+     - PFK: 
      - PI: the user first create a folder with the name of dataset in PERSISTENCE_IMAGES, and then runs _python ComputePI.py_ and then write to the shell the name of the dataset of interest
   
 2. Chose 1 kernel, for example kernel = SWK, and run
