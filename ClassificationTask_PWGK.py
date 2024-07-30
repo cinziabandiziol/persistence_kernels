@@ -32,10 +32,10 @@ p_values_for_CV = [1,5,10,50,100]
 p_values_str = ['1','5','10','50','100']
 C_w_values_for_CV = [0.001,0.01,0.1,1]
 C_w_values_str = ['0.001','0.01','0.1','1']
-kernel_params_for_CV = [(r, C_w, t, c, p) for r in rho_values_for_CV for C_w in C_w_values_for_CV for t in tau_values_for_CV for c in C_values for p in p_values_for_CV]
+kernel_params_for_CV = [(r, C_w, p, t, c) for r in rho_values_for_CV for C_w in C_w_values_for_CV for p in p_values_for_CV for t in tau_values_for_CV for c in C_values]
 kernel_params_for_CV_small = [(r, C_w, p) for r in rho_values_for_CV for C_w in C_w_values_for_CV for p in p_values_for_CV]
 kernel_params_for_CV_small_str = [(r, C_w, p) for r in rho_values_str for C_w in C_w_values_str for p in p_values_str]
-kernel_params_str = [(r, C_w, t, c, p) for r in rho_values_str for C_w in C_w_values_str for t in tau_values_for_CV for c in C_values for p in p_values_str]
+kernel_params_str = [(r, C_w, p, t, c) for r in rho_values_str for C_w in C_w_values_str for p in p_values_str for t in tau_values_for_CV for c in C_values]
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -75,7 +75,6 @@ for rand_state in program:
     num_comp_matrix = 0
 
     kf = StratifiedKFold(n_splits=n_fold, shuffle=False, random_state=None)
-    #kf = KFold(n_splits=n_fold, shuffle=False, random_state=None)
 
     print('Cross-Validation - Start')
     index = range(len(balanced_train_index))
@@ -146,20 +145,19 @@ for rand_state in program:
     best_params_CV.append(kernel_params_for_CV[best_mean_index])
     best_rho = kernel_params_for_CV[best_mean_index][0]
     best_C_w = kernel_params_for_CV[best_mean_index][1]
-    best_tau = kernel_params_for_CV[best_mean_index][2]
-    best_C = kernel_params_for_CV[best_mean_index][3]
-    best_p = kernel_params_for_CV[best_mean_index][4]
+    best_p = kernel_params_for_CV[best_mean_index][2]
+    best_tau = kernel_params_for_CV[best_mean_index][3]
+    best_C = kernel_params_for_CV[best_mean_index][4]
     rho_best_str = kernel_params_str[best_mean_index][0]
     C_w_best_str = kernel_params_str[best_mean_index][1]
-    p_best_str = kernel_params_str[best_mean_index][4]
-
+    p_best_str = kernel_params_str[best_mean_index][2]
     print('Cross-Validation - End')
 
     print('Model Evaluation - Start')
 
     # Load precomputed Matrix related to best paramters
     FileMatrixBest = './PWGK_MATRICES/' + dataset_name + '/Matrix_PWGK_rho' + rho_best_str + '_p' +  p_best_str + '_C_w' + C_w_best_str + '.npy'
-    matrix_aux = np.load(FileMatrix,allow_pickle = True)
+    matrix_aux = np.load(FileMatrixBest,allow_pickle = True)
 
     # Compute Gram Matrix related to best paramters
     total_gram_matrix_model_evaluation = np.exp(- matrix_aux / (2 * best_tau**2))
