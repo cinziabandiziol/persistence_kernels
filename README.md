@@ -19,10 +19,13 @@ and for computed PFK matrices Matlab R2023b.
 
 ## **How to run**
 
-In DATASET, the user can find the precomputed Persistence Diagrams with a file with corresponding labels. With the aim to reduce costs in terms of time, we preferred precomputed also a pregram matrix for each kernel. We describe here how to proceed.
+In DATASET, the user can find the precomputed Persistence Diagrams with a file with corresponding labels. With the aim to reduce costs in terms of time, we preferred precomputed also a preGram matrix for some kernels and the PI. We describe here how to proceed.
 
 1. Compute the preGram matrices for kernels
-     - PSSK: the user runs
-       _python ComputeMatrix_PSSK.py_
-       and then write to the shell the name of the dataset of interest
-     - PWGK:  
+     - PSSK: the user first create a folder with the name of dataset in PSSK_MATRICES, and then runs _python ComputeMatrix_PSSK.py_ and then write to the shell the name of the dataset of interest
+     - PWGK: the user first create a folder with the name of dataset in PWGK_MATRICES, and then runs _python ComputeMatrix_PWGK.py_ and then write to the shell the name of the dataset of interest
+     - PI: the user first create a folder with the name of dataset in PERSISTENCE_IMAGES, and then runs _python ComputePI.py_ and then write to the shell the name of the dataset of interest
+  
+2. Chose 1 kernel, for example kernel = SWK, and run
+   $ python ClassificationTask_SWK.py
+   and then insert the name of the dataset of interest.
