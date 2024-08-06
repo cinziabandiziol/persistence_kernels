@@ -32,3 +32,10 @@ In DATASET, the user can find the precomputed Persistence Diagrams with a file w
    $ python ClassificationTask_SWK.py
    
    and then insert the name of the dataset of interest. After the job ends, a file will be created in folder REPORT summarizing the information about dataset and the results of classification.
+
+## **References**
+- Adams H.; Emerson T.;  Kirby M.; Neville R.; Peterson C.;  Shipman P.; Chepushtanova S.; Hanson E.; Motta F.; Ziegelmeier L. Persistence images: A stable vector representation of persistent homology. {\em Journal of Machine Learning Research} {\bf 2017}, {\em 18, 1--35}
+- Carriere M.; Cuturi M.; Oudot S. Sliced Wasserstein kernel for persistent diagrams. {\em International Conference on Machine Learning} {\bf 2017}, {\em 664--673}.
+- Kusano G.; Fukumizu K.; Hiraoka Y. Kernel method for persistence diagrams via kernel embedding and weight factor. {\em The Journal of Machine Learning Research} {\bf 2017}, {\em 18, 6947--6987}.
+- Reininghaus J.; Huber S.; Bauer U.; Kwitt R. A Stable Multi-Scale Kernel for Topological Machine Learning. {\em Proceedings of the IEEE conference on computer vision and pattern recognition} {\bf 2015}, {\em 4741--4748}.
+- Le T.; Yamada M. Persistence fisher kernel: A riemannian manifold kernel for persistence diagrams. In 32nd Conference on Neural Information Processing Systems, Montréal, Canada, 2018.
