@@ -24,8 +24,9 @@ In DATASET, the user can find the precomputed Persistence Diagrams with a file w
 1. Compute the preGram matrices for kernels
      - PSSK: the user first create a folder with the name of dataset in PSSK_MATRICES, and then runs _python ComputeMatrix_PSSK.py_ and then write to the shell the name of the dataset of interest
      - PWGK: the user first create a folder with the name of dataset in PWGK_MATRICES, and then runs _python ComputeMatrix_PWGK.py_ and then write to the shell the name of the dataset of interest
-     - PFK: 
-     - PI: the user first create a folder with the name of dataset in PERSISTENCE_IMAGES, and then runs _python ComputePI.py_ and then write to the shell the name of the dataset of interest
+     - PFK: the user first create a folder with the name of dataset in PFK_MATRICES, and then runs 5 times the Matlab code related to the dataset of interest contained in folder MATLAB_FILES. Then copy and paste the 5 matrices in the folder previously created in PFK_MATRICES
+
+PI: the user first create a folder with the name of dataset in PERSISTENCE_IMAGES, and then runs _python ComputePI.py_ and then write to the shell the name of the dataset of interest
   
 2. Chose 1 kernel, for example kernel = SWK, and run
    
